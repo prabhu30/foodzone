@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import { Outlet } from 'react-router-dom';
 import UserContext from './utils/UserContext';
 import { useContext, useState } from 'react';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
 
 function App() {
 
@@ -11,10 +13,12 @@ function App() {
 
   return (
     <>
-      <UserContext.Provider value={{username: user, setUser}}>
-        <Navbar />
-        <Outlet />
-      </UserContext.Provider>
+      <Provider store={appStore}>
+        <UserContext.Provider value={{username: user, setUser}}>
+          <Navbar />
+          <Outlet />
+        </UserContext.Provider>
+      </Provider>
     </>
   )
 }
