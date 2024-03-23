@@ -6,7 +6,6 @@ export default function About() {
 
     return (
         <div className="about-page">
-            <h1>Meet our Team 👨🏻‍💻</h1>
             <UserClass data={obj} />
         </div>
     )

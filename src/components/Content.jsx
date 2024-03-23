@@ -6,9 +6,6 @@ import useOnlineStatus from '../utils/useOnlineStatus';
 const Content = function () {
 
     const onlineStatus = useOnlineStatus();
-
-    console.log(onlineStatus);
-
     
     if (!onlineStatus) {
         return (
