@@ -17,8 +17,6 @@ const Navbar = function () {
     const cartItems = useSelector((store) => store.cart.items);
     console.log(cartItems);
 
-
-
     function updateText() {
         if (btnText === "Sign In") {
             setUser("Prabhu");
@@ -52,9 +50,13 @@ const Navbar = function () {
                     <li className="py-1"><Link to="/">Home</Link></li>
                     <li className="py-1"><Link to="/grocery">Grocery</Link></li>
                     <li className="py-1"><Link to="/about">About</Link></li>
-                    <li>
-                        <i className="fa-solid fa-cart-shopping px-0 text-2xl text-orange-400"></i>
-                        <span className="pl-2 text-lg">{cartItems.length}</span>
+                    <li className="">
+                        <Link to='/cart'>
+                            <div className="flex justify-center items-center gap-2">
+                                <i className="fa-solid fa-cart-shopping text-2xl text-orange-400"></i>
+                                <span className="text-lg">{cartItems.length === 0 ? "" : cartItems.length}</span>
+                            </div>
+                        </Link>
                     </li>
                     <li className="py-1 text-blue-800 font-bold">
                         Welcome, {username}!

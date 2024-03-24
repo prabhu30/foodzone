@@ -52,7 +52,7 @@ export default function RestaurantMenu() {
     setRestaurantOffers(restaurantOffersList);
   }
 
-  console.log(restaurantOffers);
+  // console.log(restaurantOffers);
 
   function setCategoryIndex(index) {
     index == showCategoryIndex ? setShowCategoryIndex(-1) : setShowCategoryIndex(index);
