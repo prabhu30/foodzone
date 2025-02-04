@@ -40,7 +40,7 @@ const RestaurantsContainer = function () {
   const fetchRestaurants = async () => {
     const data = await fetch(SWIGGY_API_RESPONSE);
     const response = await data.json();
-    console.log("Swiggy API Data fetched: ", response);
+    // console.log("Swiggy API Data fetched: ", response);
     const restaurantsListResponse =
       response?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
