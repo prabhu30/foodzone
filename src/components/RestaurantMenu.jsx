@@ -61,17 +61,17 @@ export default function RestaurantMenu() {
   if (restaurantDetails === null) return <Shimmer />;
 
   return (
-    <div className="restaurant-page  bg-gray-100 pb-16">
-      <div className="restaurant-menu w-[800px] m-auto pt-8">
+    <div className="restaurant-page bg-gray-100 pb-16">
+      <div className="restaurant-menu max-w-4xl m-auto pt-8">
         {/* Bread Crumb */}
-        <p className="bread-crumb text-xs  text-gray-500">
+        <p className="bread-crumb text-xs text-gray-500 pl-4 lg:pl-0">
           <span>Home</span> / {restaurantInfo?.city} /{" "}
           <span className="text-gray-900">{restaurantInfo?.name}</span>
         </p>
 
         {/* Restaurant Details and Ratings */}
         <div className="res-header py-8 px-4 border border-dashed border-t-0 border-x-0 border-b-gray-400">
-          <div className="res-header-top flex justify-between">
+          <div className="res-header-top flex flex-wrap justify-between gap-3">
             <div className="res-header-top-left">
               <h1 className="res-name font-bold text-xl">
                 {restaurantInfo?.name}
@@ -97,7 +97,7 @@ export default function RestaurantMenu() {
         </div>
 
         {/* Delivery time and Cost per two */}
-        <div className="res-delivery-time-cost px-4 py-4 flex gap-6 text-gray-800">
+        <div className="res-delivery-time-cost px-4 py-4 flex flex-wrap gap-6 text-gray-800">
           <p className="font-bold text-gray-700">
             <i className="fa-solid fa-clock"></i>{" "}
             {restaurantInfo?.sla.slaString}
@@ -109,7 +109,7 @@ export default function RestaurantMenu() {
         </div>
 
         {/* Offers & Coupon Codes */}
-        <div className="flex whitespace-nowrap text-ellipsis overflow-hidden pb-8 border border-t-0 border-x-0 border-b-gray-400">
+        <div className="flex w-full flex-wrap gap-y-3 px-4 pb-8 border border-t-0 border-x-0 border-b-gray-400">
           {restaurantOffers?.map((offer) => (
             <div
               key={offer.info.offerIds[0]}
@@ -135,7 +135,7 @@ export default function RestaurantMenu() {
       </div>
 
       {/* Categories */}
-      <div className="w-[800px] m-auto px-4 pt-4">
+      <div className="max-w-4xl m-auto px-4 pt-4">
         {categories.map((category, index) => (
           <CategoryAccordion
             key={index}

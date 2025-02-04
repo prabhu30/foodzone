@@ -3,7 +3,6 @@ import Shimmer from "./Shimmer";
 import { SWIGGY_API_RESPONSE } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import useOnlineStatus from '../utils/useOnlineStatus';
 
 const RestaurantsContainer = function () {
   const [restaurantsList, setRestaurantsList] = useState([]);
@@ -68,7 +67,7 @@ const RestaurantsContainer = function () {
     <>
       <div
         id="search"
-        className="search bg-gray-100 flex justify-center items-center py-8"
+        className="search bg-gray-100 flex flex-col gap-3 sm:flex-row sm:gap-0 justify-center items-center py-8"
       >
         <div className="mr-8">
           <input
