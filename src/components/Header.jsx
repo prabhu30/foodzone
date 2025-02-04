@@ -1,3 +1,5 @@
+import FoodBgImage from "/food-bg.jpg";
+
 const Header = function () {
   return (
     <div>
@@ -5,7 +7,7 @@ const Header = function () {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/food-bg.jpg')",
+            backgroundImage: `url(${FoodBgImage})`,
             backgroundSize: "100%",
             filter: "blur(3px)",
           }}
