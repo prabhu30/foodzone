@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/projects/foodzone/assets/:filePath",
+      "destination": "https://foodzone-web.vercel.app/assets/:filePath",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/projects/foodzone",
+      "destination": "https://foodzone-web.vercel.app"
+    }
+  ]
+}
