@@ -5,7 +5,7 @@ const Header = function () {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('../src/assets/food-bg.jpg')",
+            backgroundImage: "url('/food-bg.jpg')",
             backgroundSize: "100%",
             filter: "blur(3px)",
           }}
