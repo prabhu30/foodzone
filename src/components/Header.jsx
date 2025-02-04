@@ -1,10 +1,18 @@
 const Header = function () {
   return (
     <div>
-      <div className="header h-80 flex justify-center items-center text-center bg-gradient-to-r from-green-200 to-blue-300">
-        <div className="header-text flex flex-col gap-6 items-center">
+      <div className="header relative h-80 flex justify-center items-center text-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('src/assets/food-two.jpg')",
+            backgroundSize: "100%",
+            filter: "blur(3px)",
+          }}
+        ></div>
+        <div className="relative z-10 header-text flex flex-col gap-6 items-center">
           <div>
-            <p className="text-2xl font-bold text-orange-700 mb-3">
+            <p className="text-2xl font-bold text-orange-500 mb-3">
               Welcome to the FoodZone
             </p>
             <p className="text-lg text-purple-800 italic">
