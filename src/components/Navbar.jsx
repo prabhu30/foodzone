@@ -30,7 +30,7 @@ const Navbar = function () {
   }
 
   return (
-    <div className="navbar flex justify-between items-center h-12 px-4 bg-slate-200 shadow-lg">
+    <div className="navbar flex justify-between items-center h-12 px-4 bg-slate-200">
       <div className="logo-container flex items-center w-2/5">
         <img
           className="logo w-12 h-8 rounded mr-2 bg-transparent"
@@ -89,7 +89,7 @@ const Navbar = function () {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="absolute top-12 left-0 w-full bg-slate-200 shadow-lg 2xl:hidden">
+        <div className="absolute z-10 top-9 left-0 w-full bg-slate-200 shadow-lg 2xl:hidden">
           <ul className="flex flex-col items-center gap-4 py-4">
             <li className="online-status py-1">
               {onlineStatus == true ? (

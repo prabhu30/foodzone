@@ -3,7 +3,7 @@ import FoodBgImage from "/food-bg.jpg";
 const Header = function () {
   return (
     <div>
-      <div className="header relative -z-10 h-80 flex justify-center items-center text-center">
+      <div className="header relative h-80 flex justify-center items-center text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -14,7 +14,7 @@ const Header = function () {
         ></div>
         <div className="relative header-text flex flex-col gap-6 items-center">
           <div>
-            <p className="text-3  xl font-bold text-orange-500 mb-3">
+            <p className="text-3xl font-bold text-orange-500 mb-3">
               Welcome to the FoodZone
             </p>
             <p className="text-lg text-purple-800 italic">

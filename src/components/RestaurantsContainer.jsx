@@ -28,12 +28,7 @@ const RestaurantsContainer = function () {
     setFilteredRestaurants(sortedRestaurantsList);
   }
 
-  // Use Effect Hook
-  /**
-   * This will be called only once, as empty array is passed as dependency array / second argument to the hook
-   */
   useEffect(() => {
-    console.log("use effect hook called");
     fetchRestaurants();
   }, []);
 
@@ -51,11 +46,6 @@ const RestaurantsContainer = function () {
     setRestaurantsList(restaurantsListData);
     setFilteredRestaurants(restaurantsListData);
   };
-
-  // Use Effect Hook
-  /**
-   * WARNING - Placing the use Effect hook below the fetch restaurants function (in this place) has caused continous rendering issue - to be understood why
-   */
 
   const CostPerTwoCard = CostPerTwo(RestaurantCard);
 
@@ -95,7 +85,6 @@ const RestaurantsContainer = function () {
             to={"/restaurant/" + restaurant?.id}
             className="restaurant-card"
           >
-            {/* <RestaurantCard key={restaurant.id} data={restaurant} /> */}
             <CostPerTwoCard key={restaurant.id} data={restaurant} />
           </Link>
         ))}
