@@ -3,18 +3,18 @@ import FoodBgImage from "/food-bg.jpg";
 const Header = function () {
   return (
     <div>
-      <div className="header relative h-80 flex justify-center items-center text-center">
+      <div className="header relative -z-10 h-80 flex justify-center items-center text-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: `url(${FoodBgImage})`,
-            backgroundSize: "100%",
-            filter: "blur(3px)",
+            backgroundSize: "cover",
+            filter: "blur(5px)",
           }}
         ></div>
-        <div className="relative z-10 header-text flex flex-col gap-6 items-center">
+        <div className="relative header-text flex flex-col gap-6 items-center">
           <div>
-            <p className="text-2xl font-bold text-orange-500 mb-3">
+            <p className="text-3  xl font-bold text-orange-500 mb-3">
               Welcome to the FoodZone
             </p>
             <p className="text-lg text-purple-800 italic">
