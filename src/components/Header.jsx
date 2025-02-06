@@ -9,21 +9,21 @@ const Header = function () {
           style={{
             backgroundImage: `url(${FoodBgImage})`,
             backgroundSize: "cover",
-            filter: "blur(5px)",
           }}
         ></div>
+        <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative header-text flex flex-col gap-6 items-center">
           <div>
-            <p className="text-3xl font-bold text-orange-500 mb-3">
+            <p className="text-3xl font-bold text-white mb-3">
               Welcome to the FoodZone
             </p>
-            <p className="text-lg text-purple-800 italic">
+            <p className="text-lg text-blue-200 italic">
               One-Stop Hub to find best restaurants with wide range of cuisines
             </p>
           </div>
           <a
             href="#search"
-            className="w-40 button uppercase border border-slate-700 px-2 py-1 hover:bg-green-800 hover:text-white hover:border-green-800"
+            className="w-40 button rounded uppercase text-white border border-slate-800 bg-slate-800 px-2 py-2 hover:bg-green-800 hover:border-green-800"
           >
             <span className="pr-1">Explore</span> Food
           </a>

@@ -68,7 +68,7 @@ const Navbar = function () {
           <li className="">
             <Link to="/cart">
               <div className="flex justify-center items-center gap-2">
-                <i className="fa-solid fa-cart-shopping text-2xl text-blue-400"></i>
+                <i className="fa-solid fa-cart-shopping text-2xl text-slate-700"></i>
                 <span className="text-lg">
                   {cartItems.length === 0 ? "" : cartItems.length}
                 </span>
